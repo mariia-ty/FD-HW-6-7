@@ -156,15 +156,15 @@
       });
     }
   }
-})({"hsSu9":[function(require,module,exports,__globalThis) {
+})({"3X0jS":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "06b291ed9d368ec5";
+var HMR_ENV_HASH = "0b976dcb0cb37316";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "06b47352e1fb5c8b";
+module.bundle.HMR_BUNDLE_ID = "d1debfb175a9157d";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_SERVER_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -661,44 +661,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     }
 }
 
-},{}],"3bmfx":[function(require,module,exports,__globalThis) {
-//HW 6
-/*
-import { test } from './functions.js';
+},{}],"aof3X":[function(require,module,exports,__globalThis) {
 
-test();
-*/ //import Handlebars, { log } from "handlebars";
-const input = document.getElementById("bookmarkInput");
-const addBtn = document.getElementById("addBookmarkBtn");
-const list = document.getElementById("bookmarkList");
-let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
-function renderBookmarks() {
-    list.innerHTML = "";
-    bookmarks.forEach((url, index)=>{
-        const li = document.createElement("li");
-        li.innerHTML = `
-      <a href="${url}" target="_blank">${url}</a>
-      <button onclick="deleteBookmark(${index})">\u{412}\u{438}\u{434}\u{430}\u{43B}\u{438}\u{442}\u{438}</button>
-    `;
-        list.appendChild(li);
-    });
-}
-addBtn.addEventListener("click", ()=>{
-    console.log("hi");
-    const url = input.value.trim();
-    if (!url) return;
-    bookmarks.push(url);
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-    input.value = "";
-    renderBookmarks();
-});
-function deleteBookmark(index) {
-    bookmarks.splice(index, 1);
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-    renderBookmarks();
-}
-renderBookmarks();
+},{}]},["3X0jS","aof3X"], "aof3X", "parcelRequirec19c")
 
-},{}]},["hsSu9","3bmfx"], "3bmfx", "parcelRequirec19c")
-
-//# sourceMappingURL=FD-HW-6-7.e1fb5c8b.js.map
+//# sourceMappingURL=FD-HW-6-7.75a9157d.js.map
