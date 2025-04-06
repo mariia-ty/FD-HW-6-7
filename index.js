@@ -54,21 +54,18 @@ save.addEventListener("click", () => {
   localStorage.setItem("password", pass);
 });
 
-window.addEventListener("load", () => {
-  const savedUsername = localStorage.getItem("username");
-  const savedPassword = localStorage.getItem("password");
+const savedUsername = localStorage.getItem("username");
+const savedPassword = localStorage.getItem("password");
 
-  if (savedUsername) {
-    document.getElementById("username").value = savedUsername;
-  }
-  if (savedPassword) {
-    document.getElementById("password").value = savedPassword;
-  }
-});
+if (savedUsername) {
+  document.getElementById("username").value = savedUsername;
+}
+if (savedPassword) {
+  document.getElementById("password").value = savedPassword;
+}
 
-fetch('https://your-cdn.com/template.hbs') 
-  .then(response => response.text()) 
-  .then(templateSource => {
-    
+fetch("template.hbs")
+  .then((response) => response.text())
+  .then((templateSource) => {
     const template = Handlebars.compile(templateSource);
-  })
+  });
